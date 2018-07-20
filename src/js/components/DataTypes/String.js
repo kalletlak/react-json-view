@@ -53,6 +53,12 @@ export default class extends React.PureComponent {
                     </span>
                 );
             }
+        } else if("string"==typeof value && value.startsWith( "SO:" )) {
+            let url = "http://www.sequenceontology.org/miso/release_2.5/term/"+value;
+            console.log(url)
+            value = (
+                <a href={url}>{value}</a>
+            )
         }
 
         return (
