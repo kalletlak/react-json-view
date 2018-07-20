@@ -55,6 +55,7 @@
         "react-dom": "^16.0.0 || ^15.5.4"
     },
     "scripts": {
+        "prepare": "npm run build",
         "build":
             "webpack --config webpack/webpack.config.js -p --display-error-details --progress --optimize-minimize",
         "prebuild": "npm run test:unit",
